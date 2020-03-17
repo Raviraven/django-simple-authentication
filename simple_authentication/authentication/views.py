@@ -16,7 +16,7 @@ def register(request):
 
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect()
+            return HttpResponseRedirect('/')
     else:
         form = RegisterForm()
 
