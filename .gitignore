@@ -1,1 +1,6 @@
 simple_authentication/simple_authentication/__pycache__/
+simple_authentication/__pycache__/
+simple_authentication/authentication/__pycache__/
+simple_authentication/authentication/migrations/__pycache__/
+simple_authentication/db.sqlite3
+simple_authentication/.idea/
