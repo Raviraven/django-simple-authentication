@@ -25,6 +25,8 @@ class RegisterForm(UserCreationForm):
 class LoginForm(AuthenticationForm):
     class Meta:
         model = UserDB
+        fields = ['username']
         labels = {
-            'username': 'Your username'
+            'username': 'Your username',
+            'password': 'some password'
         }
