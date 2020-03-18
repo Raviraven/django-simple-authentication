@@ -1,0 +1,12 @@
+{% extends 'authentication/basic.html' %}
+{% block title %}Register new account{% endblock %}
+
+{% block header %} <h1>Register new account</h1> {% endblock %}
+
+{% block content %}
+    <form action="{% url 'authentication:register' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="register">
+    </form>
+{% endblock %}

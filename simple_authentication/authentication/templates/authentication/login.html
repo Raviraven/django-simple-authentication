@@ -1,0 +1,13 @@
+{% extends 'authentication/basic.html' %}
+{% block title %}Log in{% endblock %}
+
+{% block header %} <h1>Log in</h1> {% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.username.label }}
+    {{ form }}
+    <input type="submit" value="Login">
+    </form>
+{% endblock %}
