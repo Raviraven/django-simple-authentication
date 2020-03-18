@@ -21,3 +21,27 @@ class CustomUser(AbstractBaseUser):
     @property
     def is_admin(self):
         return self.is_admin
+
+
+class CustomUserManager(BaseUserManager):
+    def create_user(self, username, password):
+        if not username and not password:
+            raise ValueError("User must have username and password")
+
+        user = self.model(
+            username=username
+        )
+
+        user.set_password(password)
+        user.save()
+        return user
+
+    def create_superuser(self, username, password):
+
+        user = self.create_superuser(
+            username,
+            password
+        )
+        user.is_admin = True
+        user.save(using=self._db)
+        return user
