@@ -1,14 +1,14 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 # from django.contrib.auth.models import User
-from .models import UserDB
+from .models import CustomUser
 from django import forms
 
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField()
 
-    class Meta:
-        model = UserDB
+    class Meta(UserCreationForm.Meta):
+        model = CustomUser
         fields = ['username', 'email', 'password1', 'password2', 'some_additional_property']
         widgets = {
             'username': forms.TextInput(attrs={'class': 'my-test-class'}),
@@ -22,10 +22,13 @@ class RegisterForm(UserCreationForm):
         }
 
 
-class LoginForm(AuthenticationForm):
+class LoginForm(forms.ModelForm):
     class Meta:
-        model = UserDB
-        fields = ['username']
+        model = CustomUser
+        fields = ['username', 'password']
+        widgets = {
+            'password': forms.PasswordInput()
+        }
         labels = {
             'username': 'Your username',
             'password': 'some password'

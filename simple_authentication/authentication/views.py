@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth import authenticate, login
-from .models import UserDB
+from .models import CustomUser
 
 # Create your views here.
 
