@@ -22,14 +22,20 @@ class RegisterForm(UserCreationForm):
         }
 
 
-class LoginForm(forms.ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = ['username', 'password']
-        widgets = {
-            'password': forms.PasswordInput()
-        }
-        labels = {
-            'username': 'Your username',
-            'password': 'some password'
-        }
+# cant use below, because it took validation from Customer User
+# username = unique!
+# class LoginForm(forms.ModelForm):
+#     class Meta:
+#         model = CustomUser
+#         fields = ['username', 'password']
+#         widgets = {
+#             'password': forms.PasswordInput()
+#         }
+#         labels = {
+#             'username': 'Your username',
+#             'password': 'some password'
+#         }
+
+class LoginForm(forms.Form):
+    username = forms.CharField(label='Username')
+    password = forms.CharField(label='Password', widget=forms.PasswordInput())

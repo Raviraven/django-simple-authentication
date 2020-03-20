@@ -43,7 +43,7 @@ class CustomUser(AbstractBaseUser):
     REQUIRED_FIELDS = ['password']
 
     def __str__(self):
-        return self.USERNAME_FIELD
+        return self.username + self.email
 
     @property
     def is_admin(self):
