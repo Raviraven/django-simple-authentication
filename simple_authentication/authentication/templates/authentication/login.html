@@ -6,7 +6,8 @@
 {% block content %}
     <form action="" method="post">
     {% csrf_token %}
-    {{ form.username.label }}
+{#    {{ form.username.label }}#}
+{#    {{ form.non_field_errors }}#}
     {{ form }}
     <input type="submit" value="Login">
     </form>
