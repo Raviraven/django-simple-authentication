@@ -39,7 +39,8 @@ def login_user(request):
                 login(request=request, user=user)
                 return redirect(settings.LOGIN_REDIRECT_URL)
             else:
-                print('Wrong credentials')
+                credentials_error = 'Invalid username or password'
+                form.add_error(None, credentials_error)
     else:
         form = LoginForm()
     context = {'form': form}
