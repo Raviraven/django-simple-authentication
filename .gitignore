@@ -1,4 +1,5 @@
 simple_authentication/simple_authentication/__pycache__/
+.idea/
 simple_authentication/__pycache__/
 simple_authentication/authentication/__pycache__/
 simple_authentication/authentication/migrations/__pycache__/
