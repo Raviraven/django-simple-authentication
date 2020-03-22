@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/style.css' %}">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Index</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/test">Test</a></li>
+    <header class="site-header">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/" class="navigation__link">Index</a></li>
+                <li class="navigation__item"><a href="/register" class="navigation__link">Register</a></li>
+                <li class="navigation__item"><a href="/login" class="navigation__link">Login</a></li>
+                <li class="navigation__item"><a href="/test" class="navigation__link">Test</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <header>
+    <main class="main">
+        <section class="message">
+            <header class="message__header">
                 {% block header %}
                 {% endblock %}
             </header>
-
+            <div class="message__content">
             {% block content %}
             {% endblock %}
+            </div>
         </section>
     </main>
 

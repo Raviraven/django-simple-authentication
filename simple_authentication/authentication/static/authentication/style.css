@@ -1,0 +1,63 @@
+form > p > input[type="text"],
+form > p > input[type="password"]{
+    min-height: 24px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form__input-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__input--label{
+    font-size: 16px;
+}
+
+.form__input-group--submit{
+    justify-content: center;
+}
+
+.form__register{
+    min-width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form__submit{
+    min-width: 128px;
+    min-height: 32px;
+    border-radius: 4px;
+}
+
+.main{
+    padding: 16px;
+}
+
+.message__content{
+    display: flex;
+    justify-content: center;
+}
+
+.message__header{
+    display: flex;
+    justify-content: center;
+}
+
+.navigation__list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation__item{
+    text-decoration: none;
+}
+
+.navigation__link{
+    text-decoration: none;
+}
