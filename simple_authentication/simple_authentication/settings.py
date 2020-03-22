@@ -122,4 +122,5 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login'
 AUTH_USER_MODEL = 'authentication.CustomUser'

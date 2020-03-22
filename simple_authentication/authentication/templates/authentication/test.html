@@ -1,0 +1,16 @@
+{% extends 'authentication/basic.html' %}
+
+{% block title %}Test view{% endblock %}
+
+{% block header %}
+    Welcome, {{ user.username }}! 👋
+{% endblock %}
+
+{% block content %}
+    <section>
+    <p>
+        View visible only for logged-in users.
+        Welcome! 😉
+    </p>
+    </section>
+{% endblock %}
