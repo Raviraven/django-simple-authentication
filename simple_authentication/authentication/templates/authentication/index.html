@@ -8,7 +8,6 @@
 {% endblock %}
 
 {% block content %}
-<section>
     {% if user.is_authenticated %}
         <p>
         Hello user! You're name is... {{ user.username }}
@@ -19,5 +18,4 @@
         <a href="{% url 'authentication:login' %}"> Log in </a>, or
         <a href="{% url 'authentication:register' %}"> register </a>if you don't have an account.
     </p>
-</section>
 {% endblock %}
