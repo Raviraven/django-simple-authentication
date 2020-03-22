@@ -4,7 +4,7 @@
 {% block header %} <h1>Log in</h1> {% endblock %}
 
 {% block content %}
-    <form action="" method="post">
+    <form action="{% url 'authentication:login' %}" method="post">
     {% csrf_token %}
 {#    {{ form.username.label }}#}
 {#    {{ form.non_field_errors }}#}
