@@ -10,12 +10,15 @@
 {% block content %}
     {% if user.is_authenticated %}
         <p>
-        Hello user! You're name is... {{ user.username }}
-        <a href="{% url 'authentication:logout' %}">Click here</a> to logout!
+        Hello <b>{{ user.username }}</b>!
+        </p>
+    {% else %}
+        <p>
+            <a href="{% url 'authentication:login' %}"> Log in </a>, or
+            <a href="{% url 'authentication:register' %}"> register </a>if you don't have an account.
         </p>
     {% endif %}
-    <p>
-        <a href="{% url 'authentication:login' %}"> Log in </a>, or
-        <a href="{% url 'authentication:register' %}"> register </a>if you don't have an account.
-    </p>
+        <p>
+            Some site content, available for all users.
+        </p>
 {% endblock %}
