@@ -11,12 +11,12 @@ Little side-project written for learning django authentication.
 
 ## Screenshots
 1. Main page viewed as anonymous user
-![index page](gh/index-anonymous.png)
+![index page](gh/index-anonymous.PNG)
 2. Register and login views
-![register page](gh/register.png)
-![login page](gh/login.png)
+![register page](gh/register.PNG)
+![login page](gh/login.PNG)
 3. Test view (available only for authenticated users)
-![page for authorized users](gh/test-authenticated.png)
+![page for authorized users](gh/test-authenticated.PNG)
 
 
 ## How to run project
