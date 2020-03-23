@@ -1,8 +1,27 @@
+body {
+    max-width: 80vh;
+    margin: 0 auto;
+}
+
 form > p > input[type="text"],
-form > p > input[type="password"]{
+form > p > input[type="password"],
+form > p > input[type="email"]
+{
     min-height: 24px;
     border-radius: 4px;
     font-size: 16px;
+}
+
+.errorlist{
+color: red;
+}
+
+.form{
+    min-width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form__input-group{
@@ -19,14 +38,6 @@ form > p > input[type="password"]{
     justify-content: center;
 }
 
-.form__register{
-    min-width: 520px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .form__submit{
     min-width: 128px;
     min-height: 32px;
@@ -39,6 +50,7 @@ form > p > input[type="password"]{
 
 .message__content{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 

@@ -4,16 +4,23 @@
 {% block header %} <h1>Log in</h1> {% endblock %}
 
 {% block content %}
+    {{ form.non_field_errors }}
     {% if next %}
     <form action="/login?next={{ next }}" method="post">
     {% else %}
-    <form action="{% url 'authentication:login' %}" method="post">
+    <form class="form" action="{% url 'authentication:login' %}" method="post">
     {% endif %}
-{#    <input type="hidden" name="next" value="{{ next }}">#}
     {% csrf_token %}
-{#    {{ form.username.label }}#}
-{#    {{ form.non_field_errors }}#}
-    {{ form }}
-    <input type="submit" value="Login">
+        <p class="form__input-group">
+            <label class="form__input--label" for="id_username">{{ form.username.label }}</label>
+            {{ form.username }}
+        </p>
+        <p class="form__input-group">
+            <label class="form__input--label" for="id_password">{{ form.password.label }}</label>
+            {{ form.password }}
+        </p>
+        <p class="form__input-group form__input-group--submit">
+            <input class="form__submit" type="submit" value="Login">
+        </p>
     </form>
 {% endblock %}
