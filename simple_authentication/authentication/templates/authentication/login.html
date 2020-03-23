@@ -6,7 +6,7 @@
 {% block content %}
     {{ form.non_field_errors }}
     {% if next %}
-    <form action="/login?next={{ next }}" method="post">
+    <form class="form" action="/login?next={{ next }}" method="post">
     {% else %}
     <form class="form" action="{% url 'authentication:login' %}" method="post">
     {% endif %}

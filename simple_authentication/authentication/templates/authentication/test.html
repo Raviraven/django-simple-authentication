@@ -3,12 +3,14 @@
 {% block title %}Test view{% endblock %}
 
 {% block header %}
-    Welcome, {{ user.username }}! 👋
+    <h1>
+        Welcome, {{ user.username }}! 👋
+    </h1>
 {% endblock %}
 
 {% block content %}
     <p>
         View visible only for logged-in users.
-        Welcome! 😉
+        Be my guest! 😉
     </p>
 {% endblock %}
