@@ -14,8 +14,8 @@
         </p>
     {% else %}
         <p>
-            <a href="{% url 'authentication:login' %}"> Log in </a>, or
-            <a href="{% url 'authentication:register' %}"> register </a>if you don't have an account.
+            <a class="message__link" href="{% url 'authentication:login' %}">Log in</a>, or
+            <a class="message__link"href="{% url 'authentication:register' %}">register</a> if you don't have an account.
         </p>
     {% endif %}
         <p>
