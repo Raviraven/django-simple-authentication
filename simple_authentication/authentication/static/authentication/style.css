@@ -13,6 +13,7 @@ form > p > input[type="password"],
 form > p > input[type="email"]
 {
     min-height: 24px;
+    margin-left: 32px;
     border-radius: 4px;
     font-size: 16px;
 }
@@ -52,6 +53,15 @@ form > p > input[type="email"]
     background-color: #3D5A80;
     color: #E0FBFC;
     border: none;
+
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.2s ease-in;
+}
+
+.form__submit:hover{
+    transform: scale(1.01);
+    transform-origin: 50% 50%;
 }
 
 .main{
@@ -89,6 +99,13 @@ form > p > input[type="email"]
 
 .navigation__item{
     text-decoration: none;
+
+    font-weight: normal;
+    transition: font-weight 0.2s ease-in-out;
+}
+
+.navigation__item:hover{
+    font-weight: bold;
 }
 
 .navigation__link{
